@@ -29,6 +29,7 @@ enum class TokenKind: uint8_t {
   IDENTIFIER,         // [a-zA-Z][a-zA-Z]*
   TYPE,               // Type
   UNIVERSE,           // 𝒰
+  LAMBDA,             // λ
   KEYWORD_DEF,        // def
 
   /* Symbols */
@@ -74,6 +75,7 @@ inline std::string to_string(const TokenKind kind) {
     case TokenKind::IDENTIFIER:       return "IDENTIFIER";
     case TokenKind::TYPE:             return "TYPE";
     case TokenKind::UNIVERSE:         return "UNIVERSE";
+    case TokenKind::LAMBDA:           return "LAMBDA";
     case TokenKind::KEYWORD_DEF:      return "KEYWORD_DEF";
 
     /* Symbols */

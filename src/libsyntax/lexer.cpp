@@ -187,6 +187,7 @@ Token Scanner::nextToken() {
   switch (const char32_t c = peek()) {
     /* Keywords */
     case U'𝒰': advance(); return Token(TokenKind::UNIVERSE              , U"𝒰", Span(lineinfo_start, getLineInfo()));
+    case U'λ': advance(); return Token(TokenKind::LAMBDA                , U"λ", Span(lineinfo_start, getLineInfo()));
 
     /* Symbols */
     case U':': advance(); return Token(TokenKind::COLON                 , U":", Span(lineinfo_start, getLineInfo()));
